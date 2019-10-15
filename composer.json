@@ -2,7 +2,7 @@
   "name": "rfmhb2/vandar-laravel",
   "description": "laravel library for vandar gateway",
   "minimum-stability": "stable",
-  "license": "MIT License",
+  "license": "proprietary",
   "authors": [
     {
       "name": "Mohammad Hassan Rezaie tabar",

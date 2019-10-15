@@ -20,7 +20,7 @@ class VandarServiceProvider extends ServiceProvider
             return new RestDriver();
         });
         $this->app->singleton('Vandar', function () {
-            $apiKey = config('services.vandar.api', config('Vandar.api', 'fb1a319b28697e008d1l2d9adabcab4187474f73'));
+            $apiKey = config('services.vandar.api', config('Vandar.apiKey', 'fb1a319b28697e008d1l2d9adabcab4187474f73'));
             $vandar = new Vandar($apiKey, $this->app->make(DriverInterface::class));
             if (config('services.vandar.test', false)) {
                 $vandar ->enableTest();
