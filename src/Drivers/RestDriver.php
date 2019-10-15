@@ -14,10 +14,11 @@ class RestDriver implements DriverInterface
 
     public function verify($token, $api)
     {
-        return $this->restCall("verify", [
+        $result = $this->restCall("verify", [
             'api_key' => $api,
             'token' => $token,
         ]);
+        return json_decode($result, true);
     }
 
     public function restCall($uri, $data)
