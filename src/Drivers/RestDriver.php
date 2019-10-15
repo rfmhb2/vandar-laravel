@@ -1,4 +1,5 @@
 <?php
+
 namespace Vandar\Driver;
 
 class RestDriver implements DriverInterface
@@ -8,7 +9,7 @@ class RestDriver implements DriverInterface
     public function request($inputs)
     {
         $result = $this->restCall("send", $inputs);
-        return json_decode($result);
+        return json_decode($result, true);
     }
 
     public function verify($token, $api)

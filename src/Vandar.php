@@ -31,12 +31,16 @@ class Vandar
             'factorNumber' => $factorNumber,
             'description' => $description,
         ];
-        $this->driver->request($inputs);
+        $result = $this->driver->request($inputs);
+        if (isset($result['token'])) {
+            $this->token = $result['token'];
+        }
+        return $result;
     }
 
     public function verify($token)
     {
-        $this->driver->verify($token, $this->api);
+        return $this->driver->verify($token, $this->api);
     }
 
     public function redirect()
