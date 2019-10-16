@@ -1,11 +1,11 @@
 # vandar-laravel
 laravel library for vandar gateway
 
-##Installation  
-###step 1  
+## Installation  
+### step 1  
 run this command :  
 ``composer require rfmhb2/vandar-laravel``  
-###step 2  
+### step 2  
 add this to ``config/services.php``   
 ```php 
  'vandar' => [
@@ -14,7 +14,7 @@ add this to ``config/services.php``
     ]
 ```
 you can find your api in [vandar dashboard](dash.vandar.io).  
-##Usage
+## Usage
 before stating usage of this package first add this line top of the class
 ```php
 use Vandar\Laravel\Facade\Vandar;
