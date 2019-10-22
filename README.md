@@ -15,11 +15,11 @@ add this to ``config/services.php``
 ```
 you can find your api in [vandar dashboard](dash.vandar.io).  
 ## Usage
-before stating usage of this package first add this line top of the class
+Before you begin, add this code to  the top of the class
 ```php
 use Vandar\Laravel\Facade\Vandar;
 ```
-first you most send payment request like this
+Then, you most send payment request like this
 ```php
 $result = Vandar::request($amount, $mobile = null, $factorNumber = null, $description = null, $callback);
 ```
@@ -30,7 +30,7 @@ Vandar::redirect();
 //or 
 Vandar::redirectUrl();
 ```
-when user done payment, vandar redirect user to ``$callback`` with a token in url. you can verify payment with pass token to verify method like this
+After user made payment, vandar redirect user to ``$callback`` with a token in url. you can verify payment by pass token to verify method like this
 ```php
 $token=$_GET['token'];
 $result = Vandar::verify($token);
