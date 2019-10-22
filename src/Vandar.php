@@ -56,6 +56,7 @@ class Vandar
 
     public function enableTest()
     {
+        $this->redirectUrl .= "test/";
         $this->driver->enableTest();
     }
 }
