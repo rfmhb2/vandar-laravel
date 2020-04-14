@@ -13,7 +13,7 @@ add this to ``config/services.php``
         'test' => false
     ]
 ```
-you can find your api in [vandar dashboard](dash.vandar.io).  
+you can find your api in [vandar dashboard](https://dash.vandar.io).  
 ## Usage
 Before you begin, add this code to  the top of the class
 ```php
