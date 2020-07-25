@@ -1,4 +1,6 @@
 # vandar-laravel
+[![Latest Stable Version](https://poser.pugx.org/rfmhb2/vandar-laravel/v)](//packagist.org/packages/rfmhb2/vandar-laravel) [![Total Downloads](https://poser.pugx.org/rfmhb2/vandar-laravel/downloads)](//packagist.org/packages/rfmhb2/vandar-laravel) [![CircleCI Build](https://poser.pugx.org/rfmhb2/vandar-laravel/circleci)](//packagist.org/packages/rfmhb2/vandar-laravel) [![License](https://poser.pugx.org/rfmhb2/vandar-laravel/license)](//packagist.org/packages/rfmhb2/vandar-laravel)
+
 laravel library for vandar gateway
 
 ## Installation  
