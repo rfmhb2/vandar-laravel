@@ -5,13 +5,22 @@
   "license": "proprietary",
   "authors": [
     {
-      "name": "Mohammad Hassan Rezaie tabar",
+      "name": "Mohammad Hassan Rezaei tabar",
       "email": "mohammadhassanbolivand@gmail.com"
     }
   ],
+  "scripts": {
+    "tests": "vendor/bin/phpunit"
+  },
   "autoload": {
     "psr-4": {
       "Vandar\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Vandar\\": "src/",
+      "Tests\\": "tests/"
     }
   },
   "extra": {
@@ -23,5 +32,13 @@
         "Vandar": "Vandar\\Laravel\\Facade\\Vandar"
       }
     }
+  },
+  "require-dev": {
+    "orchestra/testbench": "^4.0",
+    "phpunit/phpunit": "^8.0"
+  },
+  "require": {
+    "ext-json": "*",
+    "ext-curl": "*"
   }
 }
