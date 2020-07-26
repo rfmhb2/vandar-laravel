@@ -21,7 +21,7 @@ class Vandar
         $this->api = $api;
     }
 
-    public function request($amount, $mobile = null, $factorNumber = null, $description = null, $callback)
+    public function request($amount, $callback, $mobile = null, $factorNumber = null, $description = null)
     {
         $inputs = [
             'api_key' => $this->api,
@@ -31,7 +31,7 @@ class Vandar
             'factorNumber' => $factorNumber,
             'description' => $description,
         ];
-        $result = $this->driver->request($inputs);
+        $result = $this->driver->request("send", $inputs);
         if (isset($result['token'])) {
             $this->token = $result['token'];
         }
@@ -40,18 +40,21 @@ class Vandar
 
     public function verify($token)
     {
-        return $this->driver->verify($token, $this->api);
+        return $this->driver->request("verify", [
+            'api_key' => $this->api,
+            'token' => $token,
+        ]);
     }
 
-    public function redirect()
+    public function redirect($token = null)
     {
-        header('Location: ' . $this->redirectUrl());
+        header('Location: ' . $this->redirectUrl($token));
         die();
     }
 
-    public function redirectUrl()
+    public function redirectUrl($token = null)
     {
-        return $this->redirectUrl . $this->token;
+        return $this->redirectUrl . ($this->token ?? $token);
     }
 
     public function enableTest()

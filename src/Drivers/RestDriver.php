@@ -6,22 +6,13 @@ class RestDriver implements DriverInterface
 {
     protected $baseUrl = "https://vandar.io/api/ipg/";
 
-    public function request($inputs)
+    public function request($uri, $inputs)
     {
-        $result = $this->restCall("send", $inputs);
+        $result = $this->restCall($uri, $inputs);
         return json_decode($result, true);
     }
 
-    public function verify($token, $api)
-    {
-        $result = $this->restCall("verify", [
-            'api_key' => $api,
-            'token' => $token,
-        ]);
-        return json_decode($result, true);
-    }
-
-    public function restCall($uri, $data)
+    private function restCall($uri, $data)
     {
         $url = $this->baseUrl . $uri;
         $ch = curl_init();
