@@ -2,8 +2,8 @@
 
 namespace Tests;
 
-use PHPUnit\Framework\TestCase;
-use Vandar\Driver\RestDriver;
+use Orchestra\Testbench\TestCase;
+use Vandar\Drivers\RestDriver;
 use Vandar\Vandar;
 
 class GatewayTest extends TestCase

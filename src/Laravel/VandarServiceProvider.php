@@ -3,8 +3,8 @@
 namespace Vandar\Laravel;
 
 use Illuminate\Support\ServiceProvider;
-use Vandar\Driver\DriverInterface;
-use Vandar\Driver\RestDriver;
+use Vandar\Drivers\DriverInterface;
+use Vandar\Drivers\RestDriver;
 use Vandar\Vandar;
 
 class VandarServiceProvider extends ServiceProvider

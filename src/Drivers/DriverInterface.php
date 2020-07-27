@@ -1,6 +1,6 @@
 <?php
 
-namespace Vandar\Driver;
+namespace Vandar\Drivers;
 
 interface DriverInterface
 {
