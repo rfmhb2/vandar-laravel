@@ -2,8 +2,8 @@
 
 namespace Vandar;
 
-use Vandar\Driver\DriverInterface;
-use Vandar\Driver\RestDriver;
+use Vandar\Drivers\DriverInterface;
+use Vandar\Drivers\RestDriver;
 
 class Vandar
 {

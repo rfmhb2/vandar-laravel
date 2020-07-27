@@ -19,7 +19,6 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Vandar\\": "src/",
       "Tests\\": "tests/"
     }
   },
@@ -34,8 +33,7 @@
     }
   },
   "require-dev": {
-    "orchestra/testbench": "^4.0",
-    "phpunit/phpunit": "^8.0"
+    "orchestra/testbench": "^4.0"
   },
   "require": {
     "ext-json": "*",
