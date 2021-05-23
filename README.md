@@ -23,7 +23,8 @@ use Vandar\Laravel\Facade\Vandar;
 ```
 Then, you most send payment request like this
 ```php
-$result = Vandar::request($amount, $mobile = null, $factorNumber = null, $description = null, $callback);
+$result = Vandar::request($amount, $callback, $mobile = null, $factorNumber = null, $description = null)
+
 ```
 and save ``$result['token']`` for verify payment.  
 now you can redirect user to gateway
